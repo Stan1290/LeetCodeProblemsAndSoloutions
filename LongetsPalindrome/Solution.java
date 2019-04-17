@@ -10,6 +10,7 @@ public class Solution {
 		String s1 = "abassdsz";
 		String s2 = "baaacaaab3ergdafffa";
 		String s3 = "xabcddcbay";
+		String s4 = "";
 		// boolean isPal1 = isPalindrome(string);
 		// boolean isPal2 = isPalindrome(string2);
 		// longestPalindrome(s3);
@@ -18,7 +19,9 @@ public class Solution {
 	}
 
 	public static String longestPalindrome(String s) {
-		String longetsPanidrome = s.length() == 0 ? "" :"" + s.charAt(0);
+		if (s.length() == 0)
+			return "";
+		String longetsPanidrome = "" + s.charAt(0);
 		HashMap<Character, ArrayList<Integer>> positions = new HashMap<>();
 		for (int i = 0; i < s.length(); i++) {
 			if (positions.containsKey(s.charAt(i))) {
